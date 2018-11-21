@@ -15,7 +15,7 @@ public class CommonManager extends Manager {
     @Override
     public void requestApplications(Request request) {
         if (request.getRequestType() == "请假" && request.getNumber() <= 2) {
-            System.out.printf("%s:%s数量%d被批准 %n", this.getName(), request.getRequestContent(), request.getNumber());
+            System.out.printf("%s:%s数量%d天被批准 %n", this.getName(), request.getRequestContent(), request.getNumber());
         }else{
             if (superior !=null){
                 superior.requestApplications(request);
